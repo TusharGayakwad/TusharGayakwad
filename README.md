@@ -28,5 +28,9 @@
 ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=TusharGayakwad&limit=5&theme=flat&combine_all_yearly_contributions=true)
 
-### 📈 My GitHub Contributions
-![Snake animation](https://github.com/TusharGayakwad/TusharGayakwad/blob/output/github-contribution-grid-snake.svg)
+### 📈 My GitHub Contributions🐍
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/TusharGayakwad/TusharGayakwad/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/TusharGayakwad/TusharGayakwad/output/github-snake.svg" />
+  <img alt="github-snake" src="https://raw.githubusercontent.com/ramprasathmk/ramprasathmk/output/github-snake.svg" />
+</picture>
