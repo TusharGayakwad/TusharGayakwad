@@ -1,7 +1,34 @@
+# name: Generate Snake Animation
+
+# on:
+#   schedule: # Executes every 12 hours
+#     - cron: "0 */12 * * *"
+#   workflow_dispatch:
+
+# jobs:
+#   build:
+#     name: Generate Snake Animation
+#     runs-on: ubuntu-latest
+#     steps:
+#       # Step 1: Generate Snake Animation
+#       - name: Generate Snake Animation
+#         uses: Platane/snk@v2
+#         with:
+#           github_user_name: TusharGayakwad
+
+#       # Step 2: Push the SVG to the output branch
+#       - name: Deploy to GitHub Pages
+#         uses: crazy-max/ghaction-github-pages@v2
+#         with:
+#           target_branch: output
+#           build_dir: dist
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
 name: Generate Snake Animation
 
 on:
-  schedule: # Executes every 12 hours
+  schedule: # Run every 12 hours
     - cron: "0 */12 * * *"
   workflow_dispatch:
 
@@ -10,14 +37,15 @@ jobs:
     name: Generate Snake Animation
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Generate Snake Animation
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Generate Snake Animation
         uses: Platane/snk@v2
         with:
           github_user_name: TusharGayakwad
 
-      # Step 2: Push the SVG to the output branch
-      - name: Deploy to GitHub Pages
+      - name: Push to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: output
